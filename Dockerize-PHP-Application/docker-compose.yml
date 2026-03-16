@@ -1,7 +1,7 @@
 version: "2"
 services:
   webserver:
-    image: mydemophpimage
+    image: docker pull php:latest
     ports:
       - "80:80"
       - "443:443"
@@ -10,9 +10,9 @@ services:
     environment:
       MYSQL_DB_CONNECTION: test
       MYSQL_DB_NAME: test
-      MYSQL_USER: test
-      MYSQL_PASSWORD: test
-      SITE_URL: http://localhost
+      MYSQL_USER: admin  
+      MYSQL_PASSWORD: admin123
+      SITE_URL: database.cro4tmy0fvoq.ap-southeast-1.rds.amazonaws.com
     networks:
       - test
 
